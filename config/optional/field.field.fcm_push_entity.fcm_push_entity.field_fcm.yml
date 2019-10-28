@@ -1,0 +1,24 @@
+status: true
+dependencies:
+  config:
+    - field.storage.fcm_push_entity.field_fcm
+  module:
+    - firebase_ui
+id: fcm_push_entity.fcm_push_entity.field_fcm
+field_name: field_fcm
+entity_type: fcm_push_entity
+bundle: fcm_push_entity
+label: 'fcm target user'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: user_token_devices
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

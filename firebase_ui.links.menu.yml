@@ -1,0 +1,14 @@
+
+# Fcm push entity menu items definition
+entity.fcm_push_entity.collection:
+  title: 'Fcm push entity list'
+  route_name: entity.fcm_push_entity.collection
+  description: 'List Fcm push entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+fcm_push_entity.admin.structure.settings:
+  title: 'Fcm push entity settings'
+  description: 'Configure Fcm push entity entities'
+  route_name: fcm_push_entity.settings
+  parent: system.admin_structure

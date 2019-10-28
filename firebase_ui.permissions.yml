@@ -1,0 +1,20 @@
+add fcm push entity entities:
+  title: 'Create new Fcm push entity entities'
+
+administer fcm push entity entities:
+  title: 'Administer Fcm push entity entities'
+  description: 'Allow to access the administration form to configure Fcm push entity entities.'
+  restrict access: true
+
+delete fcm push entity entities:
+  title: 'Delete Fcm push entity entities'
+
+edit fcm push entity entities:
+  title: 'Edit Fcm push entity entities'
+
+view published fcm push entity entities:
+  title: 'View published Fcm push entity entities'
+
+view unpublished fcm push entity entities:
+  title: 'View unpublished Fcm push entity entities'
+

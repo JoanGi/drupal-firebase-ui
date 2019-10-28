@@ -1,0 +1,5 @@
+entity.fcm_push_entity.add_form:
+  route_name: entity.fcm_push_entity.add_form
+  title: 'Add Fcm push entity'
+  appears_on:
+    - entity.fcm_push_entity.collection

@@ -1,0 +1,7 @@
+name: 'firebase_ui'
+type: module
+description: 'My Awesome Module'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - firebase
