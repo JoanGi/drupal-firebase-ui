@@ -1,18 +1,17 @@
 status: true
 dependencies:
   module:
+    - taxonomy
     - user
-id: user.field_user_token_devices
-field_name: field_user_token_devices
+id: user.field_firebase_topics
+field_name: field_firebase_topics
 entity_type: user
-type: string
+type: entity_reference
 settings:
-  max_length: 1024
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

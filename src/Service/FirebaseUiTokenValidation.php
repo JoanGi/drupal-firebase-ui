@@ -6,11 +6,12 @@ use Drupal\Core\Config\ConfigFactory;
 use Drupal\Core\Logger\LoggerChannelInterface;
 use GuzzleHttp\ClientInterface;
 use Drupal\Component\Serialization\Json;
+use Drupal\firebase\Service\FirebaseServiceBase;
 
 /**
  * Service for validate throught Firebase the token send by devices.
  */
-class FirebaseTokenValidation extends FirebaseServiceBase {
+class FirebaseUiTokenValidation extends FirebaseServiceBase {
 
   /**
    * Validation endpoint.

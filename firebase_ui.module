@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
 
 /**
  * Implements hook_help().
@@ -20,5 +21,16 @@ function firebase_ui_help($route_name, RouteMatchInterface $route_match) {
       return $output;
 
     default:
+  }
+}
+
+/**
+ * Implements entity_bundle_field_info_alter().
+ */
+function firebase_ui_entity_bundle_field_info_alter(&$fields, EntityTypeInterface $entity_type, $bundle) {
+  if ($entity_type->id() == 'user') {
+    if (!empty($fields['field_user_token_devices'])) {
+      $fields['field_user_token_devices']->addConstraint('UserTokenConstraint');
+    }
   }
 }

@@ -1,0 +1,6 @@
+status: true
+dependencies: {  }
+name: 'Firebase Topics'
+vid: firebase_topics
+description: 'Topics to group users to send notifications'
+weight: 0

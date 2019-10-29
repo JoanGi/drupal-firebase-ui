@@ -4,7 +4,6 @@ namespace Drupal\firebase_ui\Plugin\Validation\Constraint;
 
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
-use Drupal\firebase_ui\Service\FirebaseUiTokenValidator;
 
 /**
  * Validates the PodcastDuration constraint.
@@ -26,8 +25,15 @@ class UserTokenConstraintValidator extends ConstraintValidator {
     if (!isset($item)) {
       return NULL;
     }
-    $validate = FirebaseUiTokenValidator::validateDeviceToken($item) == FALSE;
-    return ($validate == TRUE ? TRUE : $this->context->addViolation($constraint->notValidatedToken, ['value' => 'Not Validated']));
+    // Token validation service throught Firebase.
+    $tokenValidator = \Drupal::service('firebase.token_validation');
+    if ($tokenValidator->validateDeviceToken($item->get('value')->getValue()) == TRUE) {
+      // nothing.
+    }
+    else {
+      return ($this->context->addViolation($constraint->notValidatedToken, ['value' => 'Not Validated']));
+    }
+
   }
 
 }
