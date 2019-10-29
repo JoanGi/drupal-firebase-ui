@@ -1,0 +1,4 @@
+services:
+  firebase.token_validation:
+    class: Drupal\fcm_token_validation\Service\FirebaseTokenValidation
+    arguments: ["@config.factory", "@http_client", "@logger.channel.firebase"]
